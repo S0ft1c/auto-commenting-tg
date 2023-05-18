@@ -12,6 +12,10 @@ class DuckDB(object):
         channel_name string,
         )""")
 
+        self.c.sql("""create table if not exists phrases (
+        phrase string,
+        )""")
+
     def sql_req(self, req: str):
         return self.c.sql(req)
 
