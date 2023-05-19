@@ -154,3 +154,4 @@ config.py
 test.py
 sergay.session
 database.duckdb
+your_client.session
