@@ -7,8 +7,6 @@ targets = utils.receive_target(db)
 first_addition(targets)
 
 
-# TODO: write function to add new phrases in auto-comment
-
 # handler of main commands
 @client.on(telethon.events.NewMessage(main_channel))
 async def command(event):
@@ -31,9 +29,9 @@ async def command(event):
                                                     " то вам надо указать именно ссылку.\n\n"
                                                     "**!list_all**\n__выводит список всех подключенных каналов"
                                                     " и фраз__\n\n"
-                                                    "**!add_phrase**\n__Добавляет фразу, которая после, при"
+                                                    "**!add_phrase <сама фраза>**\n__Добавляет фразу, которая после, при"
                                                     "комментировании, будет (фразы выбираются случайным образом)__\n\n"
-                                                    "**!del_phrase**\n__Удаляет фразу__\n\n"
+                                                    "**!del_phrase <сама фраза>**\n__Удаляет фразу__\n\n"
                                                     "")
 
         elif "del_channel" in message:  # del_channel function
